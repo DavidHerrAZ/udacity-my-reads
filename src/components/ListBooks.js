@@ -20,7 +20,7 @@ class ListBooks extends Component {
         <div className="list-books-title">
           <h1>MyReads</h1>
         </div>
-        <div className="list-books-content">
+        <main className="list-books-content">
           <div>
             <div className="bookshelf">
               <h2 className="bookshelf-title">Currently Reading</h2>
@@ -37,7 +37,7 @@ class ListBooks extends Component {
               <Book books={books.filter(book => book.shelf === 'read')} />
             </div>
           </div>
-        </div>
+        </main>
         <Link to="/search" className="open-search">
           <button>Add a book</button>
         </Link>
