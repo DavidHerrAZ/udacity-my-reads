@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Book from './Book';
+import Shelf from './Shelf';
 
 class ListBooks extends Component {
   static propTypes = {
@@ -17,22 +18,14 @@ class ListBooks extends Component {
           <h1>MyReads</h1>
         </div>
         <main className="list-books-content">
-          <div>
-            <div className="bookshelf">
-              <h2 className="bookshelf-title">Currently Reading</h2>
-              <Book
-                books={books.filter(book => book.shelf === 'currentlyReading')}
-              />
-            </div>
-            <div className="bookshelf">
-              <h2 className="bookshelf-title">Want to Read</h2>
-              <Book books={books.filter(book => book.shelf === 'wantToRead')} />
-            </div>
-            <div className="bookshelf">
-              <h2 className="bookshelf-title">Read</h2>
-              <Book books={books.filter(book => book.shelf === 'read')} />
-            </div>
-          </div>
+          <Shelf name="Currently Reading" />
+          <Book
+            books={books.filter(book => book.shelf === 'currentlyReading')}
+          />
+          <Shelf name="Want to Read" />
+          <Book books={books.filter(book => book.shelf === 'wantToRead')} />
+          <Shelf name="Read" />
+          <Book books={books.filter(book => book.shelf === 'read')} />
         </main>
         <Link to="/search" className="open-search">
           <button>Add a book</button>
