@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Author from './Author';
 
 class Book extends Component {
   static propTypes = {
@@ -36,7 +37,7 @@ class Book extends Component {
                 </div>
               </div>
               <p className="book-title">{book.title}</p>
-              <p className="book-authors">{book.authors}</p>
+              <Author authors={book.authors} />
             </div>
           </li>
         ))}
