@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import * as BooksAPI from '../BooksAPI';
 import PropTypes from 'prop-types';
-import escapeRegExp from 'escape-string-regexp';
 import Book from './Book';
 
 class SearchBooks extends Component {
