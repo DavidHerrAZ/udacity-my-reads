@@ -6,7 +6,8 @@ import Book from './Book';
 
 class SearchBooks extends Component {
   static propTypes = {
-    books: PropTypes.array.isRequired
+    books: PropTypes.array.isRequired,
+    onUpdateShelf: PropTypes.func.isRequired
   };
 
   state = {
@@ -34,6 +35,7 @@ class SearchBooks extends Component {
 
   render() {
     const { query, searchResults } = this.state;
+    const { onUpdateShelf } = this.props;
 
     return (
       <div className="search-books">
@@ -54,7 +56,7 @@ class SearchBooks extends Component {
         </div>
 
         <div className="search-books-results">
-          <Book books={searchResults} />
+          <Book books={searchResults} onUpdateShelf={onUpdateShelf} />
         </div>
       </div>
     );
