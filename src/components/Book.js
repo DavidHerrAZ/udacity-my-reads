@@ -4,11 +4,12 @@ import Author from './Author';
 
 class Book extends Component {
   static propTypes = {
-    books: PropTypes.array.isRequired
+    books: PropTypes.array.isRequired,
+    onUpdateShelf: PropTypes.func.isRequired
   };
 
   render() {
-    const { books } = this.props;
+    const { books, onUpdateShelf } = this.props;
 
     return (
       <ol className="books-grid">
@@ -28,7 +29,12 @@ class Book extends Component {
                   }}
                 />
                 <div className="book-shelf-changer">
-                  <select value={book.shelf || 'none'}>
+                  <select
+                    value={book.shelf || 'none'}
+                    onChange={e => {
+                      onUpdateShelf(book, e.target.value);
+                    }}
+                  >
                     <option value="move" disabled>
                       Move to...
                     </option>
