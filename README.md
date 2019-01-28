@@ -13,7 +13,7 @@ To get started developing right away:
 
 - Books may be moved to a different shelf by clicking the green down arrow in the bottom right of the book.
 - To search for new books to add to a shelf, click the green + button the apps bottom right.
-- Add new books by using the top search bar or go back with the back arrow. Also, [see notes](##Important)
+- Add new books by using the top search bar or go back with the back arrow. Also, [see notes](#Important)
 
 ## What You're Getting
 
