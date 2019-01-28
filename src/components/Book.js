@@ -36,7 +36,7 @@ class Book extends Component {
                     }}
                   >
                     <option value="move" disabled>
-                      Move to...
+                      Select Shelf...
                     </option>
                     <option value="currentlyReading">Currently Reading</option>
                     <option value="wantToRead">Want to Read</option>
