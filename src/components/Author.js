@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class Author extends Component {
-  static propTypes = {
-    authors: PropTypes.array.isRequired
-  };
-
   render() {
     const { authors } = this.props;
 
